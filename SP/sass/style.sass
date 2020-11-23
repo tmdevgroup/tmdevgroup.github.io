@@ -1,0 +1,201 @@
+@import "colors"
+body
+	font-family: 'Roboto', sans-serif
+	background-color: $body-bg
+	color: $header-dark
+	margin: 0
+	padding: 0
+	font-size: 16px
+
+h1, h2, h3, h4, h5, h6
+	padding: 0
+	margin: 0
+	color: white
+
+
+
+// HEADER
+.fullscreen
+	display: flex
+	position: relative
+	width: 100%
+	min-height: 100vh
+	background-image: url(../img/221.jpg) 
+	background-position: bottom
+	background-repeat: no-repeat
+	background-size: cover
+.btn
+	margin-top: 20px
+	padding: 7px 30px
+	display: inline-block
+	color: white
+	border-radius: 15px
+	text-decoration: none
+	font-size: 16px
+	font-weight: 700
+	&-primary
+		background-color: $header-blue
+		border-bottom: 5px solid darken($header-blue, 10%)
+		&:hover
+			background-color: lighten($header-blue, 10%)
+.navbar
+	padding: 10px
+	&_nav-logo
+		width: 70%
+	&_menu
+		list-style: none
+		padding: 0
+		display: flex
+		li 
+			margin-right: 40px
+			a 
+				text-decoration: none
+				font-weight: 700
+				color: white
+				&::after
+					content: ""
+					display: block
+					width: 100%
+					height: 2px
+					background-color: $header-blue
+					transform: translateY(10px) scale(0)
+					transition: all 0.3s
+				&:hover
+					text-decoration
+					&::after
+						transform: translateY(10px) scale(1)
+	&_lang
+		list-style: none
+		padding: 0
+		display: flex
+		& li
+			margin-right: 10px
+			a 
+			text-decoration: none
+.header-info
+	position: relative
+	width: 100%
+	height: 100%
+	margin-left: 100px
+	margin-top: 150px
+	font-weight: 900
+	&_title
+		color: $header-blue
+	&_subtitle
+		color: $header-white
+		font-size: 14px
+// HEADER END
+
+
+
+
+
+
+.section
+	background-color: white
+	display: flex
+	justify-content: space-between
+	height: 1000px
+	&_slider
+		margin-top: 30px
+		width: 100%
+		height: 100%
+		// border:2px solid #fff
+		-moz-box-shadow: 10px 10px 50px #ccc
+		-webkit-box-shadow: 10px 10px 50px #ccc
+		box-shadow: 10px 10px 50px #ccc
+		
+		
+	&_img
+		height: 100%
+		width: 100%
+		border-radius: 10px
+		transition: 1s
+		&:hover
+			transform: scale(1.1)
+	&_about
+		text-align: center
+		width: 100%
+		margin-top: 30px
+		text-align: center
+	&_title
+		color: $section-blue
+		font-size: 30px
+		font-weight: 700
+		// &::after
+		// 	content: ""
+		// 	display: block
+		// 	width: 60px
+		// 	height: 3px
+		// 	margin: 25px auto
+		// 	background: $section-blue
+	&_text
+		color: $section-dark
+		font-size: 15px
+	
+
+.button
+	text-decoration: none
+	border: none
+	background: transparent
+	padding: 0 24px
+	font-size: 16px
+	line-height: 52px
+	position: relative
+	color: #3E4651
+	cursor: pointer
+	letter-spacing: 0.5px
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		width: 50%
+		height: 48px
+		background: transparent
+		border: 2px solid #4AB9F2
+		z-index: -1
+		border-radius: 5px
+		transition: 0.3s ease-in-out
+	&:after
+		content: ""
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
+		background: #fff
+		height: 30px
+		width: 80%
+		z-index: -1
+		transition: 0.3s linear
+	&:hover:after
+		opacity: 0
+		background: #4AB9F2
+	&:hover
+		color: #fff
+	&:hover:before
+		width: 100%
+		background: #4AB9F2
+		box-shadow: 0 10px 90px -2px rgba(#000,0.2)
+.swiper-container
+	width: 100%
+	height: 100%
+	border-radius: 10px
+.swiper-slide
+	background: $section-dark
+	display: -webkit-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	-webkit-justify-content: center
+	justify-content: center
+	-webkit-box-align: center
+	-webkit-align-items: center
+	align-items: center
+
+
+
+
+
